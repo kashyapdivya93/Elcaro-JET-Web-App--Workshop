@@ -1,0 +1,168 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+ <div class="oj-hybrid-applayout-page">
+    <div class="oj-applayout-fixed-top">
+      <div class="oj-row headClass">
+        <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+          <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+            <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[toggleDrawer]]" chroming="half" display="icons">
+              <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-hamburger headIcon"></span>
+              <span>Navigation Drawer</span>
+            </oj-button>
+          </div>
+        </div>
+        <div class="oj-sm-8 oj-md-8">
+          <h1 class="logoHeader">
+            <img src="css/images/logo.png" class="logo" />
+          </h1>
+        </div>
+        <div class="oj-sm-2 oj-md-2">
+          <img  id="notificaton"  src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;" />
+        </div>
+      </div>
+    </div>
+    <!-- This is where your main page content will be loaded -->
+    <div class="oj-applayout-content">
+      <div role="main" class="oj-hybrid-applayout-content" style="visibility: visible!important;">
+        <div class="demo-grid-sizes" style="margin-top:14%;height: 50px;background-color: #dfdbdb;text-align: center; ">
+          <span style="padding-top: 15px;display: block;">Check-out</span>
+        </div>
+        <div class="oj-row checkOutHead">
+          <div class="oj-row checkOutLogo" style="position: relative;">
+              <span class="loaderr" style="position: absolute;color:#ffffff;margin-left: -18%;">
+                <strong>Loading...</strong></span>
+            <!-- <img src="css/images/check-out-icon.png" style="position: absolute;margin-left: -15%;margin-top: 35%;height: 50px;"> -->
+            <img  id="checkOutLogo"  alt="profile image" class="demo-james-icon imgProfile">
+
+          </div>
+         
+          <!-- <div class="oj-row"> -->
+          <p style="padding-top:3%"><span id="first_name"></span></p>
+        </div>
+        <div class="demo-grid-sizes downloadBillDiv" id="downloadBill" >
+            <div class="oj-sm-6 oj-md-6" id="download">
+                <!-- <a target="_blank" href="http://www.pdf995.com/samples/pdf.pdf" style="color:#ffffff;"> -->
+               
+                  <img src="css/images/download-bill-icon.png" style="height: 30px;">
+                <p>Download Bill</p>
+                </a>
+            </div>
+            <div class="oj-sm-6 oj-md-6"> 
+              <a href="mailto:?subject=Booking Invoice&body=http://res.cloudinary.com/psjsaravana/image/upload/v1513073391/CFI/output.pdf" style="color:#ffffff;">
+              <img src="css/images/email-icon.png" style="height: 30px;">
+              <p  >Email Bill</p>
+            </a>
+            </div>
+          </div>
+         
+        <div class="demo-grid-sizes checkFirstDiv">
+          <div class="oj-row">
+            <div class="oj-row checkInHeader" style="display: -webkit-box;">
+                <div class="oj-sm-10 oj-md-10">
+                  <span style="padding-left: 2%;padding-top: 2%;display: inline-block;">Card Details</span>
+                  </div>
+                  <div class="oj-sm-2 oj-md-2" style="padding-top: 2%;">
+                  <span>VISA</span>
+                  </div>
+            </div>
+            <div class="oj-row dtls"   style="display: -webkit-box;">
+                <div class="oj-sm-7 oj-md-7">
+                    <p>Registered Credit Card No:</p>
+                </div>
+                <div class="oj-sm-5 oj-md-5">
+                  xxxx xxxx xxxx <span id="credit_card_number"></span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="demo-grid-sizes checkFirstDiv">
+            <div class="oj-row">
+              <div class="oj-row checkInHeader">
+                <span style="padding-left: 2%;padding-top: 2%;display: inline-block;">Checkout Details</span>
+              </div>
+              <div class="oj-row" style="background-color: #f3f3f3;height: 30px;"> 
+                  <span style="padding-left: 2%;padding-top: 2%;display: inline-block;">Booking ID : <b id="lblActibeBook"></b></span>
+              </div>
+              <div class="oj-row dtls chekOutRow">
+                  <div class="oj-sm-7 oj-md-7">
+                     <span>Room Type</span>
+                  </div>
+                  <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                      <span id="room_type"></span>
+                  </div>
+              </div>
+              <div class="oj-row dtls chekOutRow">
+                  <div class="oj-sm-7 oj-md-7">
+                     <span>Duration</span>
+                  </div>
+                  <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                      <span id="duaration"></span>
+                  </div>
+              </div>
+              <div class="oj-row dtls chekOutRow">
+                  <div class="oj-sm-7 oj-md-7">
+                     <span>Guests</span>
+                  </div>
+                  <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                      <span id="spnGuests"></span>
+                  </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="demo-grid-sizes checkFirstDiv">
+              <div class="oj-row">
+                <div class="oj-row checkInHeader">
+                  <span style="padding-left: 2%;padding-top: 2%;display: inline-block;">Payment Details</span>
+                </div>
+                <div class="oj-row dtls chekOutRow">
+                    <div class="oj-sm-7 oj-md-7">
+                       <span>Room Charges</span>
+                    </div>
+                    <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                        <span id="room_tarrif"></span>
+                    </div>
+                </div>
+                <div class="oj-row dtls chekOutRow">
+                    <div class="oj-sm-7 oj-md-7">
+                       <span>Add On-Service(Food & Drinks)</span>
+                    </div>
+                    <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                        <span id="services"></span>
+                    </div>
+                </div>
+                <div class="oj-row dtls chekOutRow">
+                    <div class="oj-sm-7 oj-md-7">
+                       <span>Other Services</span>
+                    </div>
+                    <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                        <span id="otherservices"></span>
+                    </div>
+                </div>
+                <div class="oj-row dtls chekOutRow">
+                 
+                      <div class="oj-sm-7 oj-md-7">
+                          <strong><span>Total Amount</span></strong>
+                       </div>
+                       <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                           <strong><span id="total">$1574</span> </strong>
+                       </div>
+
+                 
+                    
+                </div>
+              </div>
+            </div>
+  
+            <div class="oj-row div3Row5" id="next" on-click="[[clickListener]]">
+                <oj-button class="checkInBtn" id='nextBtn' on-click='[[nextBtn]]'>Done</oj-button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
